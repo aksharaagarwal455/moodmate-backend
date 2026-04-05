@@ -14,7 +14,8 @@ const app = express();
 // ─── CORS — only allow your frontend ──────────────────────────────────────
 const allowedOrigins = [
   'http://localhost:3000',
-  process.env.FRONTEND_URL,   // set this in .env on production
+  'https://moodmate-lilac.vercel.app',  // ← yeh add karo
+  process.env.FRONTEND_URL,
 ].filter(Boolean);
 
 app.use(cors({
