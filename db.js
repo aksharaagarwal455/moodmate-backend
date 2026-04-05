@@ -5,16 +5,16 @@ const db = mysql.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
-  port: parseInt(process.env.DB_PORT) || 3306,
+  port: parseInt(process.env.DB_PORT) || 3307,
   waitForConnections: true,
   connectionLimit: 10,
 });
 
 db.getConnection((err, connection) => {
   if (err) {
-    console.error('❌ MySQL connection failed:', err.message);
+    console.error(' MySQL connection failed:', err.message);
   } else {
-    console.log('✅ MySQL connected successfully');
+    console.log(' MySQL connected successfully');
     connection.release();
   }
 });
